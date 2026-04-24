@@ -1,0 +1,8 @@
+-- database: ./database.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM Tech
+
+
+Insert INTO Tech(Model, Bench Marks hell divers, Price, Description) VALUES("5090, 130–170+ FPS, 6500,") 
