@@ -1,4 +1,4 @@
-from flask import Flask, g
+from flask import Flask, g, render_template
 import sqlite3
 
 DATABASE = 'database.db'
@@ -22,11 +22,11 @@ def close_connection(exception):
 def home():
     db = get_db()
     cursor = db.cursor()
-    sql = "SELECT * FROM Tech;"
+    sql = "SELECT * FROM gpus;"
     cursor.execute(sql)
     results = cursor.fetchall()
 
-    return "Welcome to tech hub"
+    return render_template("home.html",results=results)
 
 if __name__ == "__main__":
     app.run(debug=True)
