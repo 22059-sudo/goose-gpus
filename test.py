@@ -18,6 +18,8 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+    
+
 @app.route('/')
 def home():
     db = get_db()
@@ -25,6 +27,7 @@ def home():
     sql = "SELECT * FROM gpus;"
     cursor.execute(sql)
     results = cursor.fetchall()
+    return str(results)
 
     return render_template("home.html",results=results)
 
