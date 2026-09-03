@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
  {% block body %}
- {{results}}
- 
+ <div class="three-column">
+    {% for gpu in results %}
+      <div class="w3-card-4">
+         <img src="ImageURL" alt="">
+         <h1>{{ gpu["Model"] }}</h1>
+      </div>
+    {% endfor %}
+ </div>
  
  {% endblock %}  
